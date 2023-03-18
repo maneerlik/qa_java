@@ -14,7 +14,7 @@ public class Cat {
         return "Мяу";
     }
 
-    public List<String> getFood() throws Exception {
+    public List<String> getFood() {
         return predator.eatMeat();
     }
 
