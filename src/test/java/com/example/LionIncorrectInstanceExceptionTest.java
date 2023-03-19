@@ -16,7 +16,7 @@ public class LionIncorrectInstanceExceptionTest {
     private Feline feline;
 
     @Test(expected = IllegalArgumentException.class)
-    public void lionIncorrectInstance() {
+    public void lionIncorrectInstanceThrowsException() {
         new Lion("Hermaphroditus", feline);
     }
 

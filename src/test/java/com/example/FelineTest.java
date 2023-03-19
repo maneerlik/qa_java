@@ -18,13 +18,13 @@ public class FelineTest {
     Feline feline;
 
     @Test
-    public void eatMeatMethodWork() {
+    public void eatMeatCallSpyGetFoodIsCalled() {
         feline.eatMeat();
         Mockito.verify(feline).getFood("Хищник");
     }
 
     @Test
-    public void getFamily() {
+    public void getFamilyCallResultCompareIsEqual() {
         Assert.assertEquals("Кошачьи", feline.getFamily());
     }
 

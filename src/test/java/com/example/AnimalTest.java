@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.mockito.Mockito;
 
 import java.util.List;
 
@@ -14,9 +13,6 @@ import java.util.List;
  */
 @RunWith(Parameterized.class)
 public class AnimalTest {
-
-    // spy для проверки методов класса Animal
-    private Animal animal = Mockito.spy(Animal.class);
 
     private final String animalKind;
     private final List<String> expectedFoodList;
@@ -35,13 +31,13 @@ public class AnimalTest {
     }
 
     @Test
-    public void getFoodTest() {
-        Assert.assertEquals(expectedFoodList, animal.getFood(animalKind));
+    public void getFoodCorrectAnimalKindIsEqual() {
+        Assert.assertEquals(expectedFoodList, new Animal().getFood(animalKind));
     }
 
     @Test
-    public void getFamily() {
+    public void getFamilyCallResultCompareIsEqual() {
         Assert.assertEquals("Существует несколько семейств:" +
-                " заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи", animal.getFamily());
+                " заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи", new Animal().getFamily());
     }
 }

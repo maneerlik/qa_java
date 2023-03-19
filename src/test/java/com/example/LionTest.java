@@ -40,29 +40,29 @@ public class LionTest {
     }
 
     @Test
-    public void getKittensMethodWork() {
+    public void getKittensCallGetKittensIsCalled() {
         new Lion(sex, feline).getKittens();
         Mockito.verify(feline).getKittens();
     }
 
     @Test
-    public void getKittens() {
+    public void getKittensCountOneCompareIsEqual() {
         Assert.assertEquals(1, new Lion(sex, feline).getKittens());
     }
 
     @Test
-    public void getFoodMethodWork() {
+    public void getFoodCallGetFoodIsCalled() {
         new Lion(sex, feline).getFood();
         Mockito.verify(feline).getFood("Хищник");
     }
 
     @Test
-    public void getFood() {
+    public void getFoodCompareResultIsEqual() {
         Assert.assertEquals(List.of("Животные", "Птицы", "Рыба"), new Lion(sex, feline).getFood());
     }
 
     @Test
-    public void hasMane() {
+    public void hasManeCompareResultIsEqual() {
         Assert.assertEquals(hasMane, new Lion(sex, feline).doesHaveMane());
     }
 }

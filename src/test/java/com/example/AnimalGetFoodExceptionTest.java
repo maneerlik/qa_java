@@ -2,7 +2,6 @@ package com.example;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
 /**
@@ -12,12 +11,9 @@ import org.mockito.junit.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class AnimalGetFoodExceptionTest {
 
-    @Spy
-    Animal animal;
-
     @Test(expected = IllegalArgumentException.class)
-    public void getFood() {
-        animal.getFood("Omnivore");
+    public void getFoodIncorrectAnimalKindThrowsException() {
+        new Animal().getFood("Omnivore");
     }
 
 }

@@ -20,12 +20,12 @@ public class CatTest {
     Feline feline;
 
     @Test
-    public void getSound() {
+    public void getSoundCallResultCompareIsEqual() {
         Assert.assertEquals("Мяу", new Cat(feline).getSound());
     }
 
     @Test
-    public void getFoodMethodWork() {
+    public void getFoodCallStubResultCompareIsEqual() {
         Mockito.when(feline.eatMeat()).thenReturn(List.of("Мыши", "Птицы", "Мясо"));
         Assert.assertEquals(List.of("Мыши", "Птицы", "Мясо"), new Cat(feline).getFood());
     }
