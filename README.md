@@ -3,7 +3,8 @@
 <div align="center">
     <h3 align="center">qa_java</h3>
     <a href="http://site.mockito.org">
-<img src="https://raw.githubusercontent.com/mockito/mockito/master/src/javadoc/org/mockito/logo.png"
+<!--<img src="https://raw.githubusercontent.com/mockito/mockito/master/src/javadoc/org/mockito/logo.png"-->
+<img src="https://github.com/mockito/mockito/raw/release/2.x/src/javadoc/org/mockito/logo.png"
      srcset="https://raw.githubusercontent.com/mockito/mockito/master/src/javadoc/org/mockito/logo@2x.png 2x"
      alt="Mockito" />
     </a>
